@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id = "person" class = "springbasic1.Person"/>
+	
+	<bean id = "service" class = "springbasic1.SpringBasic">
+	<!-- 생성자 함수 일때 사용  -->
+	<!--  <constructor-arg ref="person"></constructor-arg>-->
+	<!-- set함수를 이용할 경우 property를 사용하여 설정하며 name은 함수명에서 set를 제외한 이름
+	함수의 인자값은 값일 경우 value,객체일 경우 ref를 사용하여 bean에서 선언된
+	id를 이용하여 인자를 설정함  -->
+	<property name="person" ref="person"></property>
+	</bean>
+	
+	
+</beans>
